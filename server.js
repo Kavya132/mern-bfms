@@ -15,8 +15,8 @@ const app = express();
 app.use(express.json());
 app.use(cors({ origin: '*' }));
 
-require('dotenv').config()
-mongoose.connect(process.env.MONGO_URL).then(
+
+mongoose.connect("mongodb+srv://admin:admin@cluster0.jvcybdx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(
   () => console.log('database connected')
 )
 
